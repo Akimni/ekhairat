@@ -1,0 +1,128 @@
+@charset "ISO-8859-1";
+ul.bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffe699;
+
+    border-radius: 50px;
+}
+
+
+
+#link {
+	display: inline;
+	float: left;
+}
+
+
+#linkin{
+  font-family: serif, Helvetica;
+  font-size: 18px; 
+  display: block;
+	color: black; 
+	text-align: center; 
+	padding: 10px 48.3px; 
+	text-decoration: none;
+  cursor: pointer;
+}
+
+
+li a:hover{
+	background-color: gold;
+  font-weight: bold;
+}
+
+#log{
+	display: inline;
+	float: right;
+}
+
+.banner{
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+h1
+{
+	font-family: serif, Helvetica; 
+	text-align: center;
+	font-size: 11pt;
+	color: white;
+	text-decoration-thickness: 13%;
+	padding: 1px 48.3px; 
+}
+.info{
+    background-color: #f4a460;
+	margin-right: 3;
+	max-width: 20;
+	float: left;
+	border-radius: 70px;
+	margin: 1;
+    padding: 12;
+    overflow: hidden;
+    background-position: right 30px;
+}
+
+div.scroll , div.scroll1{
+	margin:4px, 4px;
+    padding:4px;
+    background-color: #ffffb3;
+    width: 80%;
+    height: 300px;
+    border-radius: 30px; 
+    border-style: solid;
+  	border-color: coral;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+#container-outer{
+  background:#cdebf9; 
+  height:400px; 
+  width:600px; 
+  display:flex; 
+  margin-left:auto; 
+  margin-right:auto; 
+  margin-top:60px; 
+   border-radius: 30px;  
+} 
+
+ul.bar1{
+	 list-style-type: none;
+	 margin-left:auto; 
+  margin-right:auto; 
+  margin-top:50px; 
+    overflow: hidden;
+
+}
+
+#s_subangan{
+	font-family: serif, Helvetica;
+  font-size: 18px; 
+  padding: 8px 48.3px;
+  display: block;
+	color: black; 
+	text-align: center;
+	text-decoration: none;	
+	 cursor: pointer;
+}
+#link1 { 
+  display: block;
+  width: 100%;
+  background-color:#ffe699 ;
+  margin-top:30px; 
+  border-radius: 30px; 
+  overflow: hidden; 
+}
+
+
+
+
