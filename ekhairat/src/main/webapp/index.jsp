@@ -50,11 +50,11 @@
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							 </label> <p class = "extratext"></p>--%>
 							 
-							<label>password :
+							<label class="regis"> Kata Laluan
   							<input name="password" id="password" type="password" onkeyup='check();' />
 							</label>
 							<br>
-							<label>confirm password:
+							<label class="regis"> Masukkan Kata Laluan Semula
   							<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
   							<span id='message'></span>
 							</label>
