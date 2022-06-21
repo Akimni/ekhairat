@@ -40,28 +40,26 @@
 								<p class="infotext"><span style="color: red">*</span>Semua maklumat hendaklah diisi dengan huruf besar <br><span style="color: red">*</span>Untuk log masuk setelah selesai pendaftaran, sila gunakan nombor kad pengenalan sebagai username<br><span style="color: red">*</span>Setelah selesai isi kesemua maklumat. Sila tekan 'DAFTAR AKAUN' untuk mengesahkan maklumat dan daftar</p><br>
 							</div>
 							
-							<%--<label class="regis" id="passlabel"  for="pwd">Kata Laluan</label>
+							<%--<label class="regis" id="passlabel"  for="pwd">Kata Laluan
 							<input type="password" id="pwd"  name="memberPassword" placeholder = "password pengguna" required><br>
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
-							<p class = "extratext"></p>
+							</label> <p class = "extratext"></p>
 		
-							<label class="regis" id="passlabel" for="pwd1">Masukkan Kata Laluan Semula</label>
+							<label class="regis" id="passlabell" for="pwd1">Masukkan Kata Laluan Semula
 							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
-							<p class = "extratext"></p>
-							<span id='message'></span>--%>
-							
-							<label class="regis">
+							 </label> <p class = "extratext"></p>--%>
+							 
+							<label>password :
   							<input name="password" id="password" type="password" onkeyup='check();' />
-  							Kata Laluan
 							</label>
 							<br>
-							<label class="regis">
+							<label>confirm password:
   							<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
   							<span id='message'></span>
-  							Masukkan Kata Laluan Semula
 							</label>
 							
+				
 							
 						</div>
 					</div>
