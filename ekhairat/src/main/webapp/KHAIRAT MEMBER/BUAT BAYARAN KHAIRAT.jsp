@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Non User Interface</title>
+<title>Buat Bayaran Khairat</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,23 +25,18 @@
 			<li id="log" class="log">
 				<b><a id="linkin" href="">LOG KELUAR</a></b>
 			</li>
-		</ul>
-	    <div id="container-outer">
-	    <ul class="bar1">
-	    	<li id="link1">
-				<b><a id="s_subangan" href="">SEJARAH SUMBANGAN</a></b>
-			</li>
-			<li id="link1">
-				<b><a id="s_subangan" href="">SEJARAH PEMBAYARAN KHAIRAT</a></b>
-			</li>
-			<li id="link1">
-				<b><a id="s_subangan" href="">BUAT SUMBANGAN</a></b>
-			</li>
-			<li id="link1">
-				<b><a id="s_subangan" href="">BUAT BAYARAN KHAIRAT</a></b>
-			</li>
-		</ul>		
-	    </div>
+			</ul>
+
+			<h1 id = "muatnaik">MUAT NAIK BUTIRAN TRANSAKSI</h1>
+
+ 			 <div class="button center">
+                <b><a class="but_muat" href="UPLOAD_PEMBAYARAN.html">MUAT NAIK</a></b>
+             </div>
+  			 <div class="button right">
+  			 	<b><a class="but_kem" href="HOME.html">KEMBALI</a></b>
+   				
+  			</div>
+			
 	</header>
 </body>
 </html>

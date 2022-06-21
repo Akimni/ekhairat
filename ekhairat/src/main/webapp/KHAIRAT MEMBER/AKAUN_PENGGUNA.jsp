@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Non User Interface</title>
+<title>Akaun Pengguna</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
 		<div class="topheader"></div>
-		<img class="banner" src="Screenshot_243.jpg">	
+		<img class="banner" src="Screenshot_243.jpg">
 		<ul class="bar">
 			<li id="link">
 				<b><a id="linkin" href="HOMEPAGE_MEMBER.html">HALAMAN UTAMA</a></b>
@@ -26,17 +26,14 @@
 				<b><a id="linkin" href="">LOG KELUAR</a></b>
 			</li>
 		</ul>
-		
 <br><br>
 		<div class="info">
 		<h1>
-			 INFO SEMASA
-			
+			 MAKLUMAT PENGGUNA
 		</h1>
 	    </div>
-
 	    <br><br><br>
-	    <div class="scroll">
+	    <div class="scroll1">
 	    	
 	    </div>
 

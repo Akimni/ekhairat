@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Non User Interface</title>
+<title>Buat Sumbangan</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,18 +25,18 @@
 			<li id="log" class="log">
 				<b><a id="linkin" href="">LOG KELUAR</a></b>
 			</li>
-		</ul>
-<br><br>
-		<div class="info">
-		<h1>
-			 MAKLUMAT PENGGUNA
-		</h1>
-	    </div>
-	    <br><br><br>
-	    <div class="scroll1">
-	    	
-	    </div>
+			</ul>
 
+			<h1 id = "muatnaik">MUAT NAIK BUTIRAN TRANSAKSI</h1>
+
+ 			 <div class="button center">
+                <b><a class="but_muat" href="UPLOAD_SUMBANGAN.html">MUAT NAIK</a></b>
+             </div>
+  			 <div class="button right">
+  			 	<b><a class="but_kem" href="HOME.html">KEMBALI</a></b>
+   				
+  			</div>
+			
 	</header>
 </body>
 </html>
