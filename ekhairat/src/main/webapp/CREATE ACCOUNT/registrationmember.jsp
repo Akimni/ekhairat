@@ -48,6 +48,7 @@
 							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
+							<span id="confirmMessage" class="confirmMessage"></span>
 						</div>
 					</div>
 				</form>
