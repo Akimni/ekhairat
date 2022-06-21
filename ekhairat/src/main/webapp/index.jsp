@@ -50,18 +50,17 @@
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							 </label> <p class = "extratext"></p>--%>
 							 
-							<label class="regis"> 
-  							<input name="password" id="password" type="password" onkeyup='check();' />Kata Laluan
-							</label>
+							<label class="regis"> Kata Laluan</label>
+  							<input name="password" id="password" type="password" onkeyup='check();' />
+							
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
 							</label> <p class = "extratext"></p>
 							<br>
-							<label class="regis"> 
+							<label class="regis"> Masukkan Kata Laluan Semula </label>
   							<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
-  							<span id='message'></span>Masukkan Kata Laluan Semula
-							</label>
+  							<span id='message'></span>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
-							 </label> <p class = "extratext">
+							 <p class = "extratext">
 							
 				
 							
