@@ -29,7 +29,7 @@
 
 			<div class="upload">
 				<div class="button up">
-  			 		<b><a class="but_up" href="HOME.html">SELESAI</a></b>
+  			 		<b><a class="but_up" href="SEJARAH_PEMBAYARAN.html">SELESAI</a></b>
    				</div>
 			</div>
 			
