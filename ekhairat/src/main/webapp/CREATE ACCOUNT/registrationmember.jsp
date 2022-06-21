@@ -48,7 +48,7 @@
 							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
-							<span id="confirmMessage" class="confirmMessage"></span>
+							<span id='message'></span>
 						</div>
 					</div>
 				</form>
@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" href="" >KEMBALI</button>
+		<button class="backbtn" href="AKAUN_PENGGUNA.jsp" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
