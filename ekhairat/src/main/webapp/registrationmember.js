@@ -1,14 +1,14 @@
 function checkPass() {
-var get_elem = document.getElementById,
-pass1 = document.getElementById('pwd'),
-pass2 = document.getElementById('pwd1'),
-message = document.getElementById('confirmMessage'),
+
+var pass1 = document.getElementById('pwd');
+var pass2 = document.getElementById('pwd1');
+var message = document.getElementById('confirmMessage');
 colors = {
 goodColor: "#fff",
 goodColored: "#087a08",
 badColor: "#fff",
-badColored:"#ed0b0b"
-},
+badColored:"#ed0b0b",
+}
 strings = {
 "confirmMessage": ["good", "bad"]
 };
