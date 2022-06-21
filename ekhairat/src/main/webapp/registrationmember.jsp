@@ -39,7 +39,22 @@
 							<div class="infobox"><br>
 								<p class="infotext"><span style="color: red">*</span>Semua maklumat hendaklah diisi dengan huruf besar <br><span style="color: red">*</span>Untuk log masuk setelah selesai pendaftaran, sila gunakan nombor kad pengenalan sebagai username<br><span style="color: red">*</span>Setelah selesai isi kesemua maklumat. Sila tekan 'DAFTAR AKAUN' untuk mengesahkan maklumat dan daftar</p><br>
 							</div>
-							<label class="regis" id="passlabel"  for="pwd">Kata Laluan</label>
+							
+							<label>password :
+  							<input class="regis" name="password" id="password" type="password" onkeyup='check();' />
+							</label>
+							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
+							<p class = "extratext"></p>
+								<br>
+							<label>confirm password:
+  							<input class="regis" type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
+  							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
+							<p class ="extratext"></p>
+ 							 <span id='message'></span>
+							</label>
+							
+							
+							<%--<label class="regis" id="passlabel"  for="pwd">Kata Laluan</label>
 							<input type="password" id="pwd"  name="memberPassword" placeholder = "password pengguna" required><br>
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
@@ -48,7 +63,8 @@
 							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
-							<span id='message'></span>
+							<span id='message'></span>--%>
+							
 						</div>
 					</div>
 				</form>
@@ -56,7 +72,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" href="AKAUN_PENGGUNA.jsp" >KEMBALI</button>
+		<button class="backbtn" href="AKAUN_PENGGUNA.html" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
