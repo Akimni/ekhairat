@@ -1,4 +1,4 @@
-function check() {
+var check = function() {
     if (document.getElementById('password').value ==
     document.getElementById('confirm_password').value) {
     document.getElementById('message').style.color = 'green';
@@ -10,7 +10,7 @@ function check() {
 
 
 function passwordtoogle() {
-  var x = document.getElementById("pwd");
+  var x = document.getElementById("password");
   if (x.type === "password") {
     x.type = "text";
   } else {
@@ -19,7 +19,7 @@ function passwordtoogle() {
 }
 
 function passwordconfirmtoogle() {
-  var x = document.getElementById("pwd1");
+  var x = document.getElementById("confirm_password");
   if (x.type === "password") {
     x.type = "text";
   } else {
