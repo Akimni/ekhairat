@@ -54,7 +54,7 @@
   							<input name="password" id="password" type="password" onkeyup='check();' />
 							<br>
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
-							</label> <p class = "extratext"></p>
+							 <p class = "extratext"></p>
 							<br>
 							<label class="regis"> Masukkan Kata Laluan Semula </label>
   							<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
@@ -72,7 +72,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" href="AKAUN_PENGGUNA.html" >KEMBALI</button>
+		<button class="backbtn" <script src="loginpage.js"></script> >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
