@@ -26,7 +26,7 @@
 		</div>
 		<input type="submit" name="submitlogin" value="LOG MASUK" class="btnlogin" /><br>
 	</form>
-	<button class="regis" onclick="registrationmember.jsp" >DAFTAR AKAUN BAHARU</button>
+	<button class="regis" formaction="registrationmember.jsp" >DAFTAR AKAUN BAHARU</button>
 
 </body>
 </html>
