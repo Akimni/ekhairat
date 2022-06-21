@@ -6,7 +6,7 @@
 	<meta charset="ISO-8859-1">
 	<title>Resgistration For Member</title>
 	<link rel="stylesheet" href="registration.css">
-	<script src="registration.js"></script>
+	<script src="registrationmember.js"></script>
 </head>
 <body>
 	<h1 class="header">DAFTAR AKAUN BAHARU</h1>
@@ -45,9 +45,10 @@
 							<p class = "extratext"></p>
 		
 							<label class="regis" id="passlabel" for="pwd1">Masukkan Kata Laluan Semula</label>
-							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" required><br>
+							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
+							<span id='message'></span>
 						</div>
 					</div>
 				</form>
@@ -55,7 +56,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" >KEMBALI</button>
+		<button class="backbtn" href="AKAUN_PENGGUNA.jsp" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
