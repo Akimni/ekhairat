@@ -55,7 +55,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" href="" >KEMBALI</button>
+		<button class="backbtn" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
