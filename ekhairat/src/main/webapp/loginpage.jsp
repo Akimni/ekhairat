@@ -26,7 +26,7 @@
 		</div>
 		<input type="submit" name="submitlogin" value="LOG MASUK" class="btnlogin" /><br>
 	</form>
-	<button class="regis" href="" >DAFTAR AKAUN BAHARU</button>
+	<button class="regis" href="registrationmember.html" >DAFTAR AKAUN BAHARU</button>
 
 </body>
 </html>
