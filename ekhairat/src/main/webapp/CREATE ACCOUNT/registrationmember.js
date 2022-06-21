@@ -1,5 +1,4 @@
 function checkPass() {
-	
 var get_elem = document.getElementById,
 pass1 = document.getElementById('pwd'),
 pass2 = document.getElementById('pwd1'),

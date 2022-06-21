@@ -6,7 +6,7 @@
 	<meta charset="ISO-8859-1">
 	<title>Resgistration For Member</title>
 	<link rel="stylesheet" href="registration.css">
-	<script src="registration.js"></script>
+	<script src="registrationmember.js"></script>
 </head>
 <body>
 	<h1 class="header">DAFTAR AKAUN BAHARU</h1>
