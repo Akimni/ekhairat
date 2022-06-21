@@ -1,6 +1,6 @@
 var check = function() {
-  if (document.getElementById('memberPassword').value ==
-    document.getElementById('memberPasswordtest').value) {
+  if (document.getElementById('pwd').value ==
+    document.getElementById('pwd1').value) {
     document.getElementById('message').style.color = 'green';
     document.getElementById('message').innerHTML = 'matching';
   } else {
@@ -10,7 +10,7 @@ var check = function() {
 }
 
 function passwordtoogle() {
-  var x = document.getElementById("memberPassword");
+  var x = document.getElementById("pwd");
   if (x.type === "password") {
     x.type = "text";
   } else {
@@ -19,7 +19,7 @@ function passwordtoogle() {
 }
 
 function passwordconfirmtoogle() {
-  var x = document.getElementById("memberPasswordtest");
+  var x = document.getElementById("pwd1");
   if (x.type === "password") {
     x.type = "text";
   } else {
