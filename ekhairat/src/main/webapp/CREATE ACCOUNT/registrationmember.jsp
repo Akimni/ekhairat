@@ -45,7 +45,7 @@
 							<p class = "extratext"></p>
 		
 							<label class="regis" id="passlabel" for="pwd1">Masukkan Kata Laluan Semula</label>
-							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" required><br>
+							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
 						</div>
