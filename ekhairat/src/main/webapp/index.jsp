@@ -55,7 +55,7 @@
 		</div>
 	</div>
 	<footer>
-		<a href="loginpage.jsp">KEMBALI</a>
+		<a class="backbtn" href="loginpage.jsp">KEMBALI</a>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
