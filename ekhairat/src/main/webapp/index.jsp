@@ -4,9 +4,9 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Registration For Member</title>
+	<title>Resgistration For Member</title>
 	<link rel="stylesheet" href="registration.css">
-	<script src="registration.js"></script>
+	<script src="registrationmember.js"></script>
 </head>
 <body>
 	<h1 class="header">DAFTAR AKAUN BAHARU</h1>
@@ -39,15 +39,18 @@
 							<div class="infobox"><br>
 								<p class="infotext"><span style="color: red">*</span>Semua maklumat hendaklah diisi dengan huruf besar <br><span style="color: red">*</span>Untuk log masuk setelah selesai pendaftaran, sila gunakan nombor kad pengenalan sebagai username<br><span style="color: red">*</span>Setelah selesai isi kesemua maklumat. Sila tekan 'DAFTAR AKAUN' untuk mengesahkan maklumat dan daftar</p><br>
 							</div>
-							<label class="regis" id="passlabel"  for="pwd">Kata Laluan</label>
+							
+							<%--<label class="regis" id="passlabel"  for="pwd">Kata Laluan</label>
 							<input type="password" id="pwd"  name="memberPassword" placeholder = "password pengguna" required><br>
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
 		
 							<label class="regis" id="passlabel" for="pwd1">Masukkan Kata Laluan Semula</label>
-							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" required><br>
+							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							<p class = "extratext"></p>
+							<span id='message'></span>--%>
+							
 						</div>
 					</div>
 				</form>
@@ -55,7 +58,7 @@
 		</div>
 	</div>
 	<footer>
-		<a class="backbtn" href="loginpage.jsp">KEMBALI</a>
+		<button class="backbtn" href="AKAUN_PENGGUNA.html" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
