@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Resgistration For Member</title>
+	<title>Registration For Member</title>
 	<link rel="stylesheet" href="registration.css">
 	<script src="registration.js"></script>
 </head>
@@ -55,7 +55,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" >KEMBALI</button>
+		<a href="loginpage.jsp">KEMBALI</a>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
