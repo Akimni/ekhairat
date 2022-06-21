@@ -20,13 +20,13 @@
 		<p class="typemem">LOG MASUK SEBAGAI KHAIRAT</p>
 		<div class="login">
 			<label class="logintext" for="username">Nombor K/P</label>
-			<input class="userbox" type="text" name="nomborkp" id="username" placeholder="Nombor Kad Pengenalan" reuqired><br>
+			<input class="userbox" type="text" name="nomborkp" id="username" placeholder="Nombor Kad Pengenalan" required><br>
 			<label class="logintext margin" for="password">Kata Laluan</label>
-			<input class="passbox margin" type="text" name="pass" id="password" placeholder="Kata Laluan" reuqired>
+			<input class="passbox margin" type="text" name="pass" id="password" placeholder="Kata Laluan" required>
 		</div>
 		<input type="submit" name="submitlogin" value="LOG MASUK" class="btnlogin" /><br>
 	</form>
-	<button class="regis" href="registrationmember.jsp" >DAFTAR AKAUN BAHARU</button>
+	<button class="regis" onclick="registrationmember.jsp" >DAFTAR AKAUN BAHARU</button>
 
 </body>
 </html>
