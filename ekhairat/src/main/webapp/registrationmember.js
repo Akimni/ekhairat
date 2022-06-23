@@ -26,7 +26,7 @@ function passwordconfirmtoogle() {
     x.type = "password";
   }
 }
-var myInput = document.getElementById("psw");
+var myInput = document.getElementById("password");
 
 var letter = document.getElementById("letter");
 
