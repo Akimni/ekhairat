@@ -13,27 +13,27 @@
 		<img class="banner" src="Screenshot_243.jpg">
 		<ul class="bar">
 			<li id="link">
-				<b><a id="linkin" href="HOMEPAGE_MEMBER.html">HALAMAN UTAMA</a></b>
+				<b><a id="linkin" onclick="window.location.href='HOMEPAGE_MEMBER.jsp';">HALAMAN UTAMA</a></b>
 			</li>
 			<li id="link">
-				<b><a id="linkin" href="AKAUN_PENGGUNA.html">AKAUN PENGGUNA</a></b>
+				<b><a id="linkin" onclick="window.location.href='AKAUN_PENGGUNA.jsp';">AKAUN PENGGUNA</a></b>
 			</li>
 			<li id="link">
-				<b><a id="linkin" href="SEJARAH_PEMBAYARAN.html">SEJARAH 
+				<b><a id="linkin" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">SEJARAH 
 				& PEMBAYARAN</a></b>
 			</li>
 			<li id="log" class="log">
-				<b><a id="linkin" href="">LOG KELUAR</a></b>
+				<b><a id="linkin" onclick="window.location.href='loginpage.jsp';">LOG KELUAR</a></b>
 			</li>
 			</ul>
 
 			<h1 id = "muatnaik">MUAT NAIK BUTIRAN TRANSAKSI</h1>
 
  			 <div class="button center">
-                <b><a class="but_muat" href="UPLOAD_SUMBANGAN.html">MUAT NAIK</a></b>
+                <b><a class="but_muat"  onclick="window.location.href='UPLOAD_SUMBANGAN.jsp';">MUAT NAIK</a></b>
              </div>
   			 <div class="button right">
-  			 	<b><a class="but_kem" href="HOME.html">KEMBALI</a></b>
+  			 	<b><a class="but_kem" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">KEMBALI</a></b>
    				
   			</div>
 			

@@ -23,17 +23,17 @@
 				& PEMBAYARAN</a></b>
 			</li>
 			<li id="log" class="log">
-				<b><a id="linkin" href="">LOG KELUAR</a></b>
+				<b><a id="linkin" onclick="window.location.href='loginpage.jsp';">LOG KELUAR</a></b>
 			</li>
 			</ul>
 
 			<h1 id = "muatnaik">MUAT NAIK BUTIRAN TRANSAKSI</h1>
 
  			 <div class="button center">
-                <b><a class="but_muat" href="UPLOAD_PEMBAYARAN.html">MUAT NAIK</a></b>
+                <b><a class="but_muat" onclick="window.location.href='UPLOAD_PEMBAYARAN.jsp';">MUAT NAIK</a></b>
              </div>
   			 <div class="button right">
-  			 	<b><a class="but_kem" href="HOME.html">KEMBALI</a></b>
+  			 	<b><a class="but_kem" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">KEMBALI</a></b>
    				
   			</div>
 			
