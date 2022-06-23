@@ -50,14 +50,18 @@
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							 </label> <p class = "extratext"></p>--%>
 							 
-							<label>password :
+							<label class="regis"> Kata Laluan</label>
   							<input name="password" id="password" type="password" onkeyup='check();' />
-							</label>
 							<br>
-							<label>confirm password:
+							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
+							 <p class = "extratext"></p>
+							<br>
+							<label class="regis"> Masukkan Kata Laluan Semula </label>
   							<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
   							<span id='message'></span>
-							</label>
+  							<br>
+							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
+							 <p class = "extratext">
 							
 				
 							
@@ -68,7 +72,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" href="AKAUN_PENGGUNA.html" >KEMBALI</button>
+		<button class="backbtn" onclick="window.location.href='loginpage.jsp';" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
