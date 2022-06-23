@@ -15,7 +15,7 @@
 	<div class = "box">
 		<div class = "col-75">
 			<div class = "containercart"><br>
-				<form id="Resgistration" action="registrationmember.html">
+				<form id="Resgistration" action="loginpage.jsp">
 					<div class= "row">
 						<div class = "col-50">
 							<label class="regis" for="fname">Nama</label>
@@ -74,7 +74,7 @@
 	</div>
 	<footer>
 		<button class="backbtn" onclick="window.location.href='loginpage.jsp';" >KEMBALI</button>
-		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart" onclick="window.location.href='loginpage.jsp';"/>
+		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart" />
 	</footer>
 </body>
 </html>
