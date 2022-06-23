@@ -51,7 +51,7 @@
 							 </label> <p class = "extratext"></p>--%>
 							 
 							<label class="regis"> Kata Laluan</label>
-  							<input name="password" id="password" type="password" onkeyup='check();' />
+  							<input name="password" id="password" type="password" onkeyup='check();' pattern=“(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}” title=“Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters” />
 							<br>
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
 							 <p class = "extratext"></p>
@@ -62,7 +62,13 @@
   							<br>
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							 <p class = "extratext">
-							
+							 <div id=“message”>
+							 <h3>Password must contain the following:</h3>
+       						 <p id=“letter” class=“invalid”>A <b>lowercase</b> letter</p>
+       						 <p id=“capital” class=“invalid”>A <b>capital (uppercase)</b> letter</p>
+       						 <p id=“number” class=“invalid”>A <b>number</b></p>
+       						 <p id=“length” class=“invalid”>Minimum <b>16 characters</b></p>
+       						 </div>
 				
 							
 						</div>

@@ -10,20 +10,20 @@
 <body>
     <header>
         <div class="topheader"></div>
-        <img class="banner" src="LOGO.jpeg">
+        <img class="banner" src="Screenshot_243.jpg">
         <ul class="bar">
             <li id="link">
-                <b><a id="linkin" href="HOMEPAGE_MEMBER.html">HALAMAN UTAMA</a></b>
+                <b><a id="linkin" onclick="window.location.href='HOMEPAGE_MEMBER.jsp';">HALAMAN UTAMA</a></b>
             </li>
             <li id="link">
-                <b><a id="linkin" href="AKAUN_PENGGUNA.html">AKAUN PENGGUNA</a></b>
+                <b><a id="linkin" onclick="window.location.href='AKAUN_PENGGUNA.jsp';">AKAUN PENGGUNA</a></b>
             </li>
             <li id="link">
-                <b><a id="linkin" href="SEJARAH_PEMBAYARAN.html">SEJARAH 
+                <b><a id="linkin" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">SEJARAH 
                 & PEMBAYARAN</a></b>
             </li>
             <li id="log" class="log">
-                <b><a id="linkin" href="">LOG KELUAR</a></b>
+                <b><a id="linkin" onclick="window.location.href='loginpage.jsp';">LOG KELUAR</a></b>
             </li>
             </ul>
 
@@ -35,7 +35,7 @@
 
 
                 <div class="button up">
-                       <b><a class="but_up" href="SELESAI_SUMBANGAN.html">MUAT NAIK</a></b>
+                       <b><a class="but_up" onclick="window.location.href='SELESAI_PEMBAYARAN.jsp';">MUAT NAIK</a></b>
                    </div>
            </div>
 
