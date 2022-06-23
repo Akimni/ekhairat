@@ -54,7 +54,7 @@ myInput.onkeyup = function() {
 
   if(myInput.value.match(lowerCaseLetters)) {
 
-    letter.classList.remove("“invalid”");
+    letter.classList.remove("invalid");
 
     letter.classList.add("valid");
 
