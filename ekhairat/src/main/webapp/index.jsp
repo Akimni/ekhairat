@@ -3,77 +3,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Resgistration For Member</title>
-	<link rel="stylesheet" href="registration.css">
-	<script src="registrationmember.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="loginpage.css">
 </head>
 <body>
-	<h1 class="header">DAFTAR AKAUN BAHARU</h1>
-	<br>
-	<br>
-	<div class = "box">
-		<div class = "col-75">
-			<div class = "containercart"><br>
-				<form id="Resgistration" action="registrationmember.html">
-					<div class= "row">
-						<div class = "col-50">
-							<label class="regis" for="fname">Nama</label>
-							<input class = "extratext" type="text" id="fname" name="memberName" placeholder = "nama penuh pengguna" required>
-		
-							<label class="regis" for="id">Nombor Kad Pengenalan</label>
-							<input type= "text" id="id" name="memberID" placeholder = "nombor kad" required>
-							<p class = "extratext"><span style="color: red">*</span>Nombor telefon diisi tanpa simbol(-)</p>
-		
-							<label class="regis" for="nophone">Nombor Telefon Bimbit</label>
-							<input type= "tel" id="nophone" name="memberContactNo" placeholder = "nombor telefon" required>
-							<p class = "extratext"><span style="color: red">*</span>Nombor telefon diisi tanpa simbol(-) dan tanpa (+06)</p>
-		
-							<label class="regis" for="address">Alamat</label>
-							<textarea rows = "5" cols = "60" class = "extratext" id="address" name="memberAddress" placeholder = "alamat pengguna" required></textarea>
-		
-							<label class="regis" for="mail">Email</label>
-							<input class = "extratext" type="email" id="mail" name="memberEmail" placeholder = "email pengguna" required>
-						</div>
-						<div class ="col-50">
-							<div class="infobox"><br>
-								<p class="infotext"><span style="color: red">*</span>Semua maklumat hendaklah diisi dengan huruf besar <br><span style="color: red">*</span>Untuk log masuk setelah selesai pendaftaran, sila gunakan nombor kad pengenalan sebagai username<br><span style="color: red">*</span>Setelah selesai isi kesemua maklumat. Sila tekan 'DAFTAR AKAUN' untuk mengesahkan maklumat dan daftar</p><br>
-							</div>
-							
-							<%--<label class="regis" id="passlabel"  for="pwd">Kata Laluan
-							<input type="password" id="pwd"  name="memberPassword" placeholder = "password pengguna" required><br>
-							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
-							</label> <p class = "extratext"></p>
-		
-							<label class="regis" id="passlabell" for="pwd1">Masukkan Kata Laluan Semula
-							<input type="password" id="pwd1"  name="memberPasswordtest" placeholder = "password pengguna" onkeyUp="checkPass()" required><br>
-							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
-							 </label> <p class = "extratext"></p>--%>
-							 
-							<label class="regis"> Kata Laluan</label>
-  							<input name="password" id="password" type="password" onkeyup='check();' />
-							<br>
-							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
-							 <p class = "extratext"></p>
-							<br>
-							<label class="regis"> Masukkan Kata Laluan Semula </label>
-  							<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
-  							<span id='message'></span>
-  							<br>
-							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
-							 <p class = "extratext">
-							
-				
-							
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
+	<div>
+		<img class="logo" src="Surau Al-Hidayah1.png">
 	</div>
-	<footer>
-		<button class="backbtn" onclick="window.location.href='loginpage.jsp';" >KEMBALI</button>
-		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
-	</footer>
+	<form>
+		<label class="check align" for="khairat">Khairat</label>
+		<input class = "checkbox" type="radio" id="khairat" name="khairatorstaff">
+		<label class="check nextalign" for="staff">Staff</label>
+		<input class = "checkbox" type="radio" id="staff" name="khairatorstaff">
+		<p class="typemem">LOG MASUK SEBAGAI KHAIRAT</p>
+		<div class="login">
+			<label class="logintext" for="username">Nombor K/P</label>
+			<input class="userbox" type="text" name="nomborkp" id="username" placeholder="Nombor Kad Pengenalan" required><br>
+			<label class="logintext margin" for="password">Kata Laluan</label>
+			<input class="passbox margin" type="text" name="pass" id="password" placeholder="Kata Laluan" required>
+		</div>
+		<input type="submit" name="submitlogin" value="LOG MASUK" class="btnlogin" /><br>
+	</form>
+	<button class="regis" onclick="window.location.href='registrationmember.jsp';" >DAFTAR AKAUN BAHARU</button>
+
 </body>
 </html>
