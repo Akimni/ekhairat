@@ -13,13 +13,13 @@
 		<img class="banner" src="Screenshot_243.jpg">
 		<ul class="bar">
 			<li id="link">
-				<b><a id="linkin" onclick="window.location.href='HOMEPAGE_MEMBER.jsp';">HALAMAN UTAMA</a></b>
+				<b><a id="linkin" href="HOMEPAGE_MEMBER.html">HALAMAN UTAMA</a></b>
 			</li>
 			<li id="link">
-				<b><a id="linkin"  onclick="window.location.href='AKAUN_PENGGUNA.jsp';">AKAUN PENGGUNA</a></b>
+				<b><a id="linkin" href="AKAUN_PENGGUNA.html">AKAUN PENGGUNA</a></b>
 			</li>
 			<li id="link">
-				<b><a id="linkin" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">SEJARAH 
+				<b><a id="linkin" href="SEJARAH_PEMBAYARAN.html">SEJARAH 
 				& PEMBAYARAN</a></b>
 			</li>
 			<li id="log" class="log">
