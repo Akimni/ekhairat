@@ -74,7 +74,7 @@
 	</div>
 	<footer>
 		<button class="backbtn" onclick="window.location.href='loginpage.jsp';" >KEMBALI</button>
-		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
+		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart" onclick="window.location.href='loginpage.jsp';"/>
 	</footer>
 </body>
 </html>
