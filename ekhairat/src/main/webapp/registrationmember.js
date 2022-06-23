@@ -66,6 +66,7 @@ myInput.onkeyup = function() {
 
 }
 
+
 var upperCaseLetters = /[A-Z]/g;
 
   if(myInput.value.match(upperCaseLetters)) {
@@ -90,7 +91,8 @@ var upperCaseLetters = /[A-Z]/g;
 
     number.classList.add("valid");
 
-  } else {
+  } 
+  else {
 
     number.classList.remove(
 	"valid");
@@ -105,11 +107,13 @@ var upperCaseLetters = /[A-Z]/g;
 
     length.classList.add("valid");
 
-  } else {
+  } 
+   else {
 
     length.classList.remove("valid");
 
     length.classList.add("invalid");
 
   }
-
+}
+ 
