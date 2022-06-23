@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sejarah Sumbangan</title>
+<title>Buat Bayaran Khairat</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
 		<div class="topheader"></div>
-		<img class="banner" src="Screenshot_243.jpg">
+		<img class="banner" src="LScreenshot_243.jpg">
 		<ul class="bar">
 			<li id="link">
 				<b><a id="linkin" onclick="window.location.href='HOMEPAGE_MEMBER.jsp';">HALAMAN UTAMA</a></b>
@@ -19,20 +19,26 @@
 				<b><a id="linkin" onclick="window.location.href='AKAUN_PENGGUNA.jsp';">AKAUN PENGGUNA</a></b>
 			</li>
 			<li id="link">
-				<b><a id="linkin" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">SEJARAH & PEMBAYARAN</a></b>
+				<b><a id="linkin" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">SEJARAH 
+				& PEMBAYARAN</a></b>
 			</li>
 			<li id="log" class="log">
 				<b><a id="linkin" onclick="window.location.href='loginpage.jsp';">LOG KELUAR</a></b>
 			</li>
 			</ul>
 
-			<div class="sejarah"><h1>SEJARAH SUMBANGAN</h1>
-				
+			<div class="upload">
+
+			<form action="/action_page.php">
+ 				 <input type="file" id="myFile" name="filename">
+ 				 
+			</form>
+
+				<div class="button up">
+  			 		<b><a class="but_up" onclick="window.location.href='LOADING.jsp';">MUAT NAIK</a></b>
+   				</div>
 			</div>
-			<div class="button right1">
-  			 	<b><a class="but_kem" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">KEMBALI</a></b>
-   				
-  			</div>
+			
 			
 	</header>
 </body>
