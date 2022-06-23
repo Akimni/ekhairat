@@ -51,7 +51,7 @@
 							 </label> <p class = "extratext"></p>--%>
 							 
 							<label class="regis"> Kata Laluan</label>
-  							<input name="password" id="password" type="password" onkeyup='check();' pattern=“(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}” 
+  							<input name="password" id="password" type="password" onkeyup='check();' pattern=“(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}” 
   							title="Mesti mengandungi sekurang-kurangnya satu nombor dan satu huruf besar dan huruf kecil, dan sekurang-kurangnya 8 atau lebih karakter." />
 							<br>
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan

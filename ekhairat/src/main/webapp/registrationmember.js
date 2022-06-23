@@ -101,7 +101,7 @@ var upperCaseLetters = /[A-Z]/g;
 
   }
 
-  if(myInput.value.length >= 8) {
+  if(myInput.value.length >= 6) {
 
     length.classList.remove("invalid");
 
