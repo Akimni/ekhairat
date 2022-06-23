@@ -76,5 +76,12 @@
 		<button class="backbtn" onclick="window.location.href='loginpage.jsp';" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart" />
 	</footer>
+	<%
+	String memberName = request.getParameter("memberName");
+	int memberContactNo = Integer.parseInt(request.getParameter("memberContactNo"));
+	String memberAddress = request.getParameter("memberAddress");
+	String memberEmail = request.getParameter("memberEmail");
+	String memberPassword = request.getParameter("memberPassword");
+	%>
 </body>
 </html>
