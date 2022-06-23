@@ -72,7 +72,7 @@
 		</div>
 	</div>
 	<footer>
-		<button class="backbtn" <script src="loginpage.js"></script> >KEMBALI</button>
+		<button class="backbtn" <script src="loginpage.jsp"></script> >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart"/>
 	</footer>
 </body>
