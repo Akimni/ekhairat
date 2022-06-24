@@ -65,7 +65,7 @@
 							 <p class = "extratext">
 							 
 				
-							
+							<input type="hidden" name="action"  value="createKhairatmember">
 						</div>
 					</div>
 				</form>
@@ -73,6 +73,7 @@
 		</div>
 	</div>
 	<footer>
+	
 		<button class="backbtn" onclick="window.location.href='loginpage.jsp';" >KEMBALI</button>
 		<input type="submit" form="Resgistration" name="submitinfo" value="DAFTAR AKAUN" class="btncart" />
 	</footer>
