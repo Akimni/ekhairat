@@ -6,47 +6,47 @@ import java.sql.SQLException;
 
 import static java.lang.System.out;
 
-public class registrationDao {
-	
-	String dbURL = "jdbc:postgres://ec2-52-73-184-24.compute-1.amazonaws.com/dckqi5pj1ki93c";
-	String user = "olkzesmgaifpnp";
-	String pass = "e13b8bdf28023c60fd1bfde4b54a707571b971a82e85d244b7871afc806f26ed";
-	
-	protected Connection getConnection() {
-        Connection connection = null;
-        try {
-            Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection(dbURL, user, pass);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return connection;
-    }
+	public class registrationDao{
+	    String dbURL = "jdbc:postgres://ec2-52-73-184-24.compute-1.amazonaws.com/dckqi5pj1ki93c";
+	    String user = "olkzesmgaifpnp";
+	    String pass = "e13b8bdf28023c60fd1bfde4b54a707571b971a82e85d244b7871afc806f26ed";
+
+	    protected Connection getConnection() {
+	        Connection con = null;
+	        try {
+	            Class.forName("org.postgresql.Driver");
+	            con = DriverManager.getConnection(dbURL, user, pass);
+	        } catch (SQLException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        } catch (ClassNotFoundException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
+	        return con;
+
+	    }
 	
 	public void createKhairatmember (Khairatmember mem) throws SQLException {
 
         // try-with-resource statement will auto close the connection.
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("insert into khairatmember(memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress;) values(?,?,?,?,?,?)");)
+        try (Connection con = getConnection();
+             PreparedStatement ps = con.prepareStatement("insert into khairatmember(memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress;) values(?,?,?,?,?,?)"))
         {
-            preparedStatement.setString(1, mem.getmemberName());
-            preparedStatement.setString(2, mem.getmemberID());
-            preparedStatement.setString(3, mem.getmemberContactNo());
-            preparedStatement.setString(4, mem.getmemberEmail());
-            preparedStatement.setString(5, mem.getmemberPassword());
-            preparedStatement.setString(6, mem.getmemberAddress());
-
-            out.println(preparedStatement);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            printSQLException(e);
+            ps.setString(1, mem.getmemberName());
+            ps.setString(2, mem.getmemberID());
+            ps.setString(3, mem.getmemberContactNo());
+            ps.setString(4, mem.getmemberEmail());
+            ps.setString(5, mem.getmemberPassword());
+            ps.setString(6, mem.getmemberAddress());
+            out.println(ps);
+            ps.executeUpdate();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
-
+/*
 	private void printSQLException(SQLException e) {
 		// TODO Auto-generated method stub
 	}
@@ -76,5 +76,5 @@ public class registrationDao {
             rowDeleted = statement.executeUpdate() > 0;
         }
         return rowDeleted;
-    }
+    }*/
 }

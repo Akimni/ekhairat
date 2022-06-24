@@ -8,13 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 
 /**
  * Servlet implementation class KhairatmemberHandler
  */
-@WebServlet(name="KhairatmemberHandler",value="/KhairatmemberHandler")
+@WebServlet("/KhairatmemberHandler")
 public class KhairatmemberHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -29,17 +28,6 @@ public class KhairatmemberHandler extends HttpServlet {
     	super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		session.removeAttribute("memberID");
-		session.invalidate();
-		response.sendRedirect("loginpage.jsp");
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -72,27 +60,27 @@ public class KhairatmemberHandler extends HttpServlet {
 	}
 	
 	private void createKhairatmember(HttpServletRequest request, HttpServletResponse response)
-	throws SQLException, IOException{
-		
+            throws SQLException, IOException {
+
 		String memberName = request.getParameter("memberName");
 		String memberID = request.getParameter("memberID");
 		String memberContactNo = request.getParameter("memberContactNo");
 		String memberAddress = request.getParameter("memberAddress");
 		String memberEmail = request.getParameter("memberEmail");
 		String memberPassword = request.getParameter("memberPassword");
-		
+
 		Khairatmember mem = new Khairatmember();
-		
+
 		mem.setmemberName(memberName);
 		mem.setmemberID(memberID);
 		mem.setmemberContactNo(memberContactNo);
 		mem.setmemberAddress(memberAddress);
 		mem.setmemberEmail(memberEmail);
 		mem.setmemberPassword(memberPassword);
-		
-		rd.createKhairatmember(mem);
-		response.sendRedirect("loginpage.jsp");
-	}
+
+        rd.createKhairatmember(mem);
+        response.sendRedirect("loginpage.jsp");
+    }
 }
 	/*private void deleteKhairatmember(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException{
