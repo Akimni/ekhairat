@@ -31,14 +31,14 @@ import static java.lang.System.out;
 
         // try-with-resource statement will auto close the connection.
         try (Connection con = getConnection();
-             PreparedStatement ps = con.prepareStatement("insert into khairatmember(memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress;) values(?,?,?,?,?,?)"))
+             PreparedStatement ps = con.prepareStatement("insert into khairatmember(membername,memberid,membercontactno,memberaddress,memberemail,memberpassword;) values(?,?,?,?,?,?)"))
         {
             ps.setString(1, mem.getmemberName());
             ps.setString(2, mem.getmemberID());
             ps.setString(3, mem.getmemberContactNo());
-            ps.setString(4, mem.getmemberEmail());
-            ps.setString(5, mem.getmemberPassword());
-            ps.setString(6, mem.getmemberAddress());
+            ps.setString(4, mem.getmemberAddress());
+            ps.setString(5, mem.getmemberEmail());
+            ps.setString(6, mem.getmemberPassword());
             out.println(ps);
             ps.executeUpdate();
         }
