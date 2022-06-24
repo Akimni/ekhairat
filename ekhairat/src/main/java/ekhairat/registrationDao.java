@@ -31,13 +31,14 @@ public class registrationDao {
 
         // try-with-resource statement will auto close the connection.
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("insert into khairatmember(memberName,memberContactNo,memberEmail,memberPassword,memberAddress;) values(?,?,?,?,?)");)
+             PreparedStatement preparedStatement = connection.prepareStatement("insert into khairatmember(memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress;) values(?,?,?,?,?,?)");)
         {
             preparedStatement.setString(1, mem.getmemberName());
-            preparedStatement.setInt(2, mem.getmemberContactNo());
-            preparedStatement.setString(3, mem.getmemberEmail());
-            preparedStatement.setString(4, mem.getmemberPassword());
-            preparedStatement.setString(5, mem.getmemberAddress());
+            preparedStatement.setString(2, mem.getmemberID());
+            preparedStatement.setString(3, mem.getmemberContactNo());
+            preparedStatement.setString(4, mem.getmemberEmail());
+            preparedStatement.setString(5, mem.getmemberPassword());
+            preparedStatement.setString(6, mem.getmemberAddress());
 
             out.println(preparedStatement);
             preparedStatement.executeUpdate();
@@ -56,10 +57,11 @@ public class registrationDao {
              PreparedStatement statement = connection.prepareStatement("update admin set khairatmembermemberName=?,khairatmembermemberContactNo=?,khairatmembermemberEmail=?, khairatmembermemberPassword=?, khairatmembermemberAddress=? where khairatmembermemberID=?");)
         {
         	statement.setString(1, khairatmember.getmemberName());
-            statement.setInt(2, khairatmember.getmemberContactNo());
-            statement.setString(3, khairatmember.getmemberEmail());
-            statement.setString(4, khairatmember.getmemberPassword());
-            statement.setString(5, khairatmember.getmemberAddress());
+        	statement.setString(2, khairatmember.getmemberID());
+            statement.setString(3, khairatmember.getmemberContactNo());
+            statement.setString(4, khairatmember.getmemberEmail());
+            statement.setString(5, khairatmember.getmemberPassword());
+            statement.setString(6, khairatmember.getmemberAddress());
 
             rowUpdated = statement.executeUpdate() > 0;
         }

@@ -70,7 +70,8 @@ public class KhairatmemberHandler extends HttpServlet {
 	throws SQLException, IOException{
 		
 		String memberName = request.getParameter("memberName");
-		int memberContactNo = Integer.parseInt(request.getParameter("memberContactNo"));
+		String memberID = request.getParameter("memberID");
+		String memberContactNo = request.getParameter("memberContactNo");
 		String memberAddress = request.getParameter("memberAddress");
 		String memberEmail = request.getParameter("memberEmail");
 		String memberPassword = request.getParameter("memberPassword");
@@ -78,6 +79,7 @@ public class KhairatmemberHandler extends HttpServlet {
 		Khairatmember mem = new Khairatmember();
 		
 		mem.setmemberName(memberName);
+		mem.setmemberID(memberID);
 		mem.setmemberContactNo(memberContactNo);
 		mem.setmemberAddress(memberAddress);
 		mem.setmemberEmail(memberEmail);

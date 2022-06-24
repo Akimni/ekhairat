@@ -2,7 +2,8 @@ package ekhairat;
 
 public class Khairatmember {
 	String memberName;
-	int memberContactNo;
+	String memberID;
+	String memberContactNo;
 	String memberEmail;
 	String memberPassword;
 	String memberAddress;
@@ -13,10 +14,16 @@ public class Khairatmember {
 	public void setmemberName(String memberName) {
 		this.memberName = memberName;
 	}
-	public int getmemberContactNo() {
+	public String getmemberID() {
+		return memberID;
+	}
+	public void setmemberID(String memberID) {
+		this.memberID = memberID;
+	}
+	public String getmemberContactNo() {
 		return memberContactNo;
 	}
-	public void setmemberContactNo(int memberContactNo) {
+	public void setmemberContactNo(String memberContactNo) {
 		this.memberContactNo = memberContactNo;
 	}
 	public String getmemberEmail() {
