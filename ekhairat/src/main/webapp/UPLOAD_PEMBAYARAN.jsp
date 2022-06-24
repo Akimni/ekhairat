@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div class="topheader"></div>
-		<img class="banner" src="LScreenshot_243.jpg">
+		<img class="banner" src="Screenshot_243.jpg">
 		<ul class="bar">
 			<li id="link">
 				<b><a id="linkin" onclick="window.location.href='HOMEPAGE_MEMBER.jsp';">HALAMAN UTAMA</a></b>

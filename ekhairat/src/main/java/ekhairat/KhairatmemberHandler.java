@@ -10,14 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 /**
  * Servlet implementation class KhairatmemberHandler
  */
-@WebServlet("/KhairatmemberHandler")
+@WebServlet(name="KhairatmemberHandler",value="/KhairatmemberHandler")
 public class KhairatmemberHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	public registrationDao rd;
+	private registrationDao rd;
 	public void init(){
 		rd = new registrationDao();
 	}
@@ -90,7 +91,7 @@ public class KhairatmemberHandler extends HttpServlet {
 		mem.setmemberPassword(memberPassword);
 		
 		rd.createKhairatmember(mem);
-		response.sendRedirect("registrationmember.jsp");
+		response.sendRedirect("loginpage.jsp");
 	}
 }
 	/*private void deleteKhairatmember(HttpServletRequest request, HttpServletResponse response)
