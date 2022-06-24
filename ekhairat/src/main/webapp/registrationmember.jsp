@@ -64,9 +64,9 @@
 							<input type = "checkbox" id="passlabel" onclick="passwordconfirmtoogle()">Papar Katalaluan
 							 <p class = "extratext">
 							 
-				
+				 
 							<input type="hidden" name="action"  value="createKhairatmember">
-							    <button type="submit" class="button button1" name="submit" >Add</button><br><br>
+							<button type="submit" class="button button1" name="submit" >Add</button><br><br>
 							
 						</div>
 					</div>
