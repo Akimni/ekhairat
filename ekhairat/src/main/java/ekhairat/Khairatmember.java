@@ -8,6 +8,8 @@ public class Khairatmember {
 	String memberPassword;
 	String memberAddress;
 	
+	public Khairatmember() {}
+	
 	public String getmemberName() {
 		return memberName;
 	}

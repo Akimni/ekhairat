@@ -51,7 +51,7 @@
 							 </label> <p class = "extratext"></p>--%>
 							 
 							<label class="regis"> Kata Laluan</label>
-  							<input name="password" id="password" type="password" onkeyup='check();' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+  							<input name="memberPassword" id="password" type="password" onkeyup='check();' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
   							title="Mesti mengandungi sekurang-kurangnya satu nombor dan satu huruf besar dan huruf kecil, dan sekurang-kurangnya 8 atau lebih karakter." />
 							<br>
 							<input type = "checkbox" id="passlabel"  onclick="passwordtoogle()">Papar Katalaluan
@@ -66,6 +66,8 @@
 							 
 				
 							<input type="hidden" name="action"  value="createKhairatmember">
+							    <button type="submit" class="button button1" name="submit" >Add</button><br><br>
+							
 						</div>
 					</div>
 				</form>
@@ -74,9 +76,6 @@
 	</div>
 	<footer>
 	
-		<button class="backbtn" onclick="window.location.href='loginpage.jsp';" >KEMBALI</button>
-		<input type="hidden" name="action"  value="createKhairatmember">
-		<input type="submit" form="Resgistration" name="submitinfo" formaction="KhairatmemberHandler" value="DAFTAR AKAUN" class="btncart" />
 	</footer>
 </body>
 </html>
