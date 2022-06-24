@@ -15,7 +15,7 @@
 	<div class = "box">
 		<div class = "col-75">
 			<div class = "containercart"><br>
-				<form id="Resgistration" action="loginpage.jsp" method="post">
+				<form id="Resgistration" action="KhairatmemberHandler.java" method="post">
 					<div class= "row">
 						<div class = "col-50">
 							<label class="regis" for="fname">Nama</label>

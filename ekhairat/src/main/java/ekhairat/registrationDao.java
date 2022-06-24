@@ -31,7 +31,7 @@ public class registrationDao {
 
         // try-with-resource statement will auto close the connection.
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("insert into khairatmember(memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress;) values(?,?,?,?,?,?)");)
+             PreparedStatement preparedStatement = connection.prepareStatement("insert into khairatmember(membername,memberid,membercontactno,memberemail,memberpassword,memberaddress;) values(?,?,?,?,?,?)");)
         {
             preparedStatement.setString(1, mem.getmemberName());
             preparedStatement.setString(2, mem.getmemberID());
@@ -54,7 +54,7 @@ public class registrationDao {
 	public boolean updateregister(Khairatmember khairatmember) throws SQLException {
         boolean rowUpdated;
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("update admin set khairatmembermemberName=?,khairatmembermemberContactNo=?,khairatmembermemberEmail=?, khairatmembermemberPassword=?, khairatmembermemberAddress=? where khairatmembermemberID=?");)
+             PreparedStatement statement = connection.prepareStatement("update admin set khairatmembermembername=?,khairatmembermembercontactno=?,khairatmembermemberemail=?, khairatmembermemberpassword=?, khairatmembermemberAddress=? where khairatmembermemberID=?");)
         {
         	statement.setString(1, khairatmember.getmemberName());
         	statement.setString(2, khairatmember.getmemberID());
@@ -71,7 +71,7 @@ public class registrationDao {
 	public boolean deleteregister(int memberID) throws SQLException {
         boolean rowDeleted;
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("delete from khairatmember where memberID=?");) {
+             PreparedStatement statement = connection.prepareStatement("delete from khairatmember where memberid=?");) {
             statement.setInt(1, memberID);
             rowDeleted = statement.executeUpdate() > 0;
         }
