@@ -31,7 +31,7 @@ public class registrationDao {
 
         // try-with-resource statement will auto close the connection.
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("insert into khairatmember(membername,memberid,membercontactno,memberemail,memberpassword,memberaddress;) values(?,?,?,?,?,?)");)
+             PreparedStatement preparedStatement = connection.prepareStatement("insert into khairatmember(memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress;) values(?,?,?,?,?,?)");)
         {
             preparedStatement.setString(1, mem.getmemberName());
             preparedStatement.setString(2, mem.getmemberID());
