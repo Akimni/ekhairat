@@ -2,15 +2,25 @@ package ekhairat;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class registrationDao {
 	
-	String dbURL = "jdbc:postgresql://ec2-52-73-184-24.compute-1.amazonaws.com/dckqi5pj1ki93c";
-	String user = "olkzesmgaifpnp";
-	String pass = "e13b8bdf28023c60fd1bfde4b54a707571b971a82e85d244b7871afc806f26ed";
+	static Connection con = null;
+	static PreparedStatement ps = null;
+	static Statement stmt = null;
+	static ResultSet rs = null;
 	
-	protected Connection getConnection() {
+	private static final String dbURL = "jdbc:postgresql://ec2-52-73-184-24.compute-1.amazonaws.com/dckqi5pj1ki93c";
+	private static final String user = "olkzesmgaifpnp";
+	private static final String pass = "e13b8bdf28023c60fd1bfde4b54a707571b971a82e85d244b7871afc806f26ed";
+	
+	public static Connection getConnection() {
         Connection con = null;
         try {
             Class.forName("org.postgresql.Driver");
@@ -44,7 +54,7 @@ public class registrationDao {
             e.printStackTrace();
         }
     }
-}
+
 	/*private void printSQLException(SQLException e) {
 		// TODO Auto-generated method stub
 	}
@@ -75,3 +85,57 @@ public class registrationDao {
         }
         return rowDeleted;
     }*/
+public static List<Khairatmember> getAllInfo(){
+	List<Khairatmember> infos = new ArrayList<Khairatmember>();
+	
+	try 
+			{
+		Connection con=getConnection();
+		stmt = con.createStatement();
+		String sql = "SELECT * FROM khairatmember ORDER BY memberid";
+		
+		rs= stmt.executeQuery(sql);
+		
+		while(rs.next()) {
+			Khairatmember i= new Khairatmember(); 
+			i.setmemberName(rs.getString("membername"));
+			i.setmemberID(rs.getString("memberid"));
+			i.setmemberContactNo(rs.getString("membercontactno"));
+			i.setmemberEmail(rs.getString("memberemail"));
+			i.setmemberPassword(rs.getString("memberpassword"));
+			i.setmemberAddress(rs.getString("memberaddress"));
+		
+			infos.add(i);
+		}
+		con.close();
+	}catch (Exception e) {
+          e.printStackTrace();
+	}      
+	return infos;
+}
+public static Khairatmember getKhairatmemberBymemberID(int memberID) {
+	// TODO Auto-generated method stub
+	Khairatmember i = new Khairatmember();
+	try {
+		
+		ps = con.prepareStatement("SELECT * FROM khairatmember WHERE memberid=?");
+		
+		rs = ps.executeQuery();
+		if(rs.next()) {
+			i.setmemberName(rs.getString("name"));
+			i.setmemberID(rs.getString("memberid"));
+			i.setmemberContactNo(rs.getString("memberrcontactno"));
+			i.setmemberEmail(rs.getString("memberemail"));
+			i.setmemberPassword(rs.getString("memberpassword"));
+			i.setmemberAddress(rs.getString("memberaddress"));
+		}
+		
+		con.close();
+		
+	}catch (Exception e) {
+          e.printStackTrace();
+    }
+	
+	return i;
+}
+}

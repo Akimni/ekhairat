@@ -26,6 +26,7 @@ public class KhairatmemberHandler extends HttpServlet {
      */
     public KhairatmemberHandler() {
     	super();
+    	rd =new registrationDao();
         // TODO Auto-generated constructor stub
     }
 
