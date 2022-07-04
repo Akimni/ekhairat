@@ -44,6 +44,25 @@ public class registrationDao {
             e.printStackTrace();
         }
     }
+	
+	public void createKhairatstaff (Khairatstaff sta) throws SQLException {
+
+        // try-with-resource statement will auto close the connection.
+        try (Connection con = getConnection();
+             PreparedStatement preparedStatement = con.prepareStatement("insert into khairatstaff(staffname,staffid,staffcontactno,staffaddress,staffemail,staffpassword) values(?,?,?,?,?,?)"))
+        {
+            preparedStatement.setString(1, sta.getstaffName());
+            preparedStatement.setString(2, sta.getstaffID());
+            preparedStatement.setString(3, sta.getstaffContactNo());
+            preparedStatement.setString(5, sta.getstaffEmail());
+            preparedStatement.setString(6, sta.getstaffPassword());
+            preparedStatement.setString(4, sta.getstaffAddress());
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 	/*private void printSQLException(SQLException e) {
 		// TODO Auto-generated method stub

@@ -8,7 +8,7 @@ import java.sql.*;
 
 
 
-@WebServlet("/login")
+@WebServlet("/loginmember")
 public class login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -63,10 +63,11 @@ public class login extends HttpServlet {
 			
 			dispatcher.forward(request, response);
 			
-		
+			{
+				
+			}
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 }

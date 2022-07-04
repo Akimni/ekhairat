@@ -42,6 +42,9 @@ public class KhairatmemberHandler extends HttpServlet {
 			case "createKhairatmember": 
 				createKhairatmember(request,response);
 			break;
+			case "createKhairatstaff": 
+				createKhairatstaff(request,response);
+			break;
 			/*case "deleteKhairatmember":
 				deleteKhairatmember(request,response;)
 			break;
@@ -51,8 +54,7 @@ public class KhairatmemberHandler extends HttpServlet {
 				case "cancel":
 				 * cancel(request,response);
 				 * break;*/
-			
-		}
+			}
 		}
 		catch (SQLException e) {
 			throw new ServletException(e);
@@ -79,7 +81,30 @@ public class KhairatmemberHandler extends HttpServlet {
 		mem.setmemberPassword(memberPassword);
 
         rd.createKhairatmember(mem);
-        response.sendRedirect("loginpage.jsp");
+        response.sendRedirect("index.jsp");
+    }
+	
+	private void createKhairatstaff(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException {
+
+		String staffName = request.getParameter("staffName");
+		String staffID = request.getParameter("staffID");
+		String staffContactNo = request.getParameter("staffContactNo");
+		String staffAddress = request.getParameter("staffAddress");
+		String staffEmail = request.getParameter("staffEmail");
+		String staffPassword = request.getParameter("staffPassword");
+
+		Khairatstaff sta = new Khairatstaff();
+
+		sta.setstaffName(staffName);
+		sta.setstaffID(staffID);
+		sta.setstaffContactNo(staffContactNo);
+		sta.setstaffAddress(staffAddress);
+		sta.setstaffEmail(staffEmail);
+		sta.setstaffPassword(staffPassword);
+
+        rd.createKhairatstaff(sta);
+        response.sendRedirect("staff.index.jsp");
     }
 }
 	/*private void deleteKhairatmember(HttpServletRequest request, HttpServletResponse response)
