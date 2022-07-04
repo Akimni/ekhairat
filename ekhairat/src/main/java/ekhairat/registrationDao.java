@@ -54,9 +54,7 @@ public class registrationDao {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
 
-=======
 	
 	public void createKhairatstaff (Khairatstaff sta) throws SQLException {
 
@@ -76,8 +74,8 @@ public class registrationDao {
             e.printStackTrace();
         }
     }
-}
->>>>>>> branch 'master' of https://github.com/Akimni/ekhairat.git
+
+
 	/*private void printSQLException(SQLException e) {
 		// TODO Auto-generated method stub
 	}
