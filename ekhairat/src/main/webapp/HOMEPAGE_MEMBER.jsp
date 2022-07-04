@@ -1,3 +1,7 @@
+<%
+	String name = request.getParameter( "nomborkp" ); 
+	session.setAttribute( "theName", name ); 
+%>
 <!DOCTYPE html>
 <html>
 <head>
