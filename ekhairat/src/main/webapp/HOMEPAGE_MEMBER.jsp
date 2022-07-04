@@ -23,7 +23,7 @@
 				<b><a id="linkin" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">SEJARAH & PEMBAYARAN</a></b>
 			</li>
 			<li id="log" class="log">
-				<b><a id="linkin" onclick="window.location.href='loginpage.jsp';">LOG KELUAR</a></b>
+				<b><a id="linkin" onclick="window.location.href='index.jsp';">LOG KELUAR</a></b>
 			</li>
 		</ul>
 		

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,11 @@
 <title>Akaun Pengguna</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<style>
+b{
+margin-left:14px;
+}
+</style>
 <body>
 	<header>
 		<div class="topheader"></div>
@@ -34,7 +40,11 @@
 	    </div>
 	    <br><br><br>
 	    <div class="scroll1">
-	    	
+	    <br>
+	    <b>NAME: </b>
+	    <c:forEach items="${Khairatmember}" var="i" varStatus="Khairatmember">
+	     <c:out value="${i.membername}"/>
+	    </c:forEach>
 	    </div>
 
 	</header>
