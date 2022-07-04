@@ -16,10 +16,10 @@
 	</div>
 	<form method="post" action="login" >
 		<label class="check align" for="khairat">Khairat</label>
-		<input class = "checkbox" type="radio" id="khairat" name="khairatormember" checked="checked" onclick="window.location.href='index.jsp';">
+		<input class = "checkbox" type="radio" id="khairat" name="khairatormember" onclick="window.location.href='index.jsp';">
 		<label class="check nextalign" for="staff">Staff</label>
-		<input class = "checkbox" type="radio" id="staff" name="khairatorstaff" onclick="window.location.href='staff.index.jsp';">
-		<p class="typemem">LOG MASUK SEBAGAI KHAIRAT</p>
+		<input class = "checkbox" type="radio" id="staff" name="khairatorstaff" checked="checked" onclick="window.location.href='staff.index.jsp';">
+		<p class="typemem">LOG MASUK SEBAGAI STAFF</p>
 		<div class="login">
 			<label class="logintext" for="username">Nombor K/P</label>
 			<input class="userbox" type="text" name="nomborkp" id="username" placeholder="Nombor Kad Pengenalan" required><br>
