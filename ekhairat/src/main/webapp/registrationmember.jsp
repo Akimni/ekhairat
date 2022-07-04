@@ -4,9 +4,9 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Resgistration For Member</title>
+	<title>Registration For Member</title>
 	<link rel="stylesheet" href="registration.css">
-	<script src="registrationmember.js"></script>
+	<script src="registration.js"></script>
 </head>
 <body>
 	<h1 class="header">DAFTAR AKAUN BAHARU</h1>
@@ -65,8 +65,8 @@
 							 <p class = "extratext">
 							 
 				 
-							<input type="hidden" name="action"  value="createKhairatmember">
-							<button type="submit" class="button button1" name="submit" >Add</button><br><br>
+							<%--<input type="hidden" name="action"  value="createKhairatmember">
+							<button type="submit" class="button button1" name="submit" >Add</button><br><br>--%>
 							
 						</div>
 					</div>
@@ -75,7 +75,9 @@
 		</div>
 	</div>
 	<footer>
-	
+		<button class="backbtn" onclick="window.location.href='index.jsp';" >KEMBALI</button>
+		<input type="hidden" form="Resgistration" name="action"  value="createKhairatmember">
+		<button type="submit" form="Resgistration" class="button button1 btncart" name="submit" >DAFTAR AKAUN</button>
 	</footer>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,10 +10,11 @@
 	<link rel="stylesheet" href="loginpage.css">
 </head>
 <body>
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 	<div>
 		<img class="logo" src="Surau Al-Hidayah1.png">
 	</div>
-	<form action="HOMEPAGE_MEMBER.jsp">
+	<form method="post" action="login" >
 		<label class="check align" for="khairat">Khairat</label>
 		<input class = "checkbox" type="radio" id="khairat" name="khairatorstaff">
 		<label class="check nextalign" for="staff">Staff</label>
@@ -28,5 +30,16 @@
 	</form>
 	<button class="regis" onclick="window.location.href='registrationmember.jsp';" >DAFTAR AKAUN BAHARU</button>
 
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.jsp"></script>
+	
+	<script type="text/javascript">
+		var status = document.getElementById("status").value;
+		if(status == "failed"){
+			//swal("Sorry","Wrong username or password","failed");
+			alert("Wrong email or password");
+		}
+	</script>
 </body>
 </html>
