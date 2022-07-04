@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@
 				& PEMBAYARAN</a></b>
 			</li>
 			<li id="log" class="log">
-				<b><a id="linkin" onclick="window.location.href='loginpage.jsp';">LOG KELUAR</a></b>
+				<b><a id="linkin" onclick="window.location.href='index.jsp';">LOG KELUAR</a></b>
 			</li>
 		</ul>
 <br><br>
