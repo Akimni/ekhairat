@@ -44,7 +44,7 @@ margin-left:14px;
 	    <br>
 	    <b>NAME: </b>
 	    <c:forEach var="user"  items="$(listUser)">
-	     <c:out value="${user.memberName}"/>
+	     <c:out value="${user.membername}"/>
 	    </c:forEach>
 	    </div>
 
