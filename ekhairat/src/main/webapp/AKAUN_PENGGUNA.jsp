@@ -3,6 +3,9 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<% if(session.getAttribute("name")==null)
+	response.sendRedirect("index.jsp");
+%>
 
 <!DOCTYPE html>
 <html>
@@ -41,21 +44,21 @@ margin-left:14px;
 		</h1>
 	    </div>
 	    <br><br><br>
-	    <div class="scroll1">
+	    <div class="scroll">
 
 	    	<form action="KhairatmemberHandler" method="post">
 
 <div class="container" style="height: auto">
     <h3>MY PROFILE</h3>
 
-    <input type="number" name="memberid"  value="${nomborkp}" hidden>
+    <input type="number" name="memberid"  value="${name}" >
 
     <div class="row">
         <div class="col-25">
             <label>NAMA</label>
         </div>
         <div class="col-75">
-            <label>${membername}</label>
+            <label>${name}</label>
         </div>
     </div>
     <div class="row">
@@ -63,7 +66,7 @@ margin-left:14px;
             <label>NOMBOR KAD PENGENALAN</label>
         </div>
         <div class="col-75">
-            <label>${memberid}</label>
+            <label>${id}</label>
         </div>
     </div>
 
@@ -72,7 +75,7 @@ margin-left:14px;
             <label>NOMBOR TELEFON</label>
         </div>
         <div class="col-75">
-            <label>${membercontactno}</label>
+            <label>${contact}</label>
         </div>
     </div>
     <div class="row">
@@ -80,7 +83,7 @@ margin-left:14px;
             <label>ALAMAT</label>
         </div>
         <div class="col-75">
-            <label>${memberaddress}</label>
+            <label>${address}</label>
         </div>
     </div>
     <div class="row">
@@ -88,7 +91,7 @@ margin-left:14px;
             <label>EMAIL</label>
         </div>
         <div class="col-75">
-            <label>${memberemail}</label>
+            <label>${email}</label>
         </div>
     </div>
     <div class="row">
@@ -96,7 +99,7 @@ margin-left:14px;
             <label>PASSWORD</label>
         </div>
         <div class="col-75">
-            <label>${memberpassword}</label>
+            <label>${password}</label>
         </div>
     </div>
 
@@ -111,19 +114,7 @@ margin-left:14px;
 
 </div>
 </form>
-	    <br>
-	    <b>NAME: </b>
-	    <c:forEach var="users"  items="$(listUser)">
-	     <c:out value="${users.membername}"/>
-	    </c:forEach>
-	    </div>
-
-	</header>
-	<%
-	Object name = session.getAttribute("membername");
-    Object id = session.getAttribute("memberid");
-%>
-<h1><%=name %></h1>
-<h1><%=id %></h1>
+</div>
+</header>
 </body>
 </html>
