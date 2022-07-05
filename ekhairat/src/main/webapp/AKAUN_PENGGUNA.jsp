@@ -85,15 +85,15 @@ margin-left:14px;
         <div class="col-75">
             <label>${address}</label>
         </div>
-    </div>
+        </div>
     <div class="row">
         <div class="col-25">
             <label>EMAIL</label>
         </div>
+        </div>
         <div class="col-75">
             <label>${email}</label>
         </div>
-    </div>
     <div class="row">
         <div class="col-25">
             <label>PASSWORD</label>
@@ -101,7 +101,7 @@ margin-left:14px;
         <div class="col-75">
             <label>${password}</label>
         </div>
-    </div>
+        </div>
 
 
 
