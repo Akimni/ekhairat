@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -21,6 +22,11 @@ public class KhairatmemberHandler extends HttpServlet {
 	public void init(){
 		rd = new registrationDao();
 	}
+	
+	private updateDao ud;
+	public void onit() {
+		ud = new updateDao();
+	}
     /**
      * Default constructor. 
      */
@@ -28,7 +34,13 @@ public class KhairatmemberHandler extends HttpServlet {
     	super();
         // TODO Auto-generated constructor stub
     }
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	HttpSession session = request.getSession();
+    	session.removeAttribute("membername");
+    	session.invalidate();
+    	response.sendRedirect("index.jsp");
+    	
+    }
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -47,10 +59,10 @@ public class KhairatmemberHandler extends HttpServlet {
 			break;
 			/*case "deleteKhairatmember":
 				deleteKhairatmember(request,response;)
-			break;
-			case "updateKahiratmember":
-				updateKhairatmember(request,responses);
-				break;
+			break;*/
+			case "updateKhairatmember":
+				updateKhairatmember(request,response);
+				break;/*
 				case "cancel":
 				 * cancel(request,response);
 				 * break;*/
@@ -106,6 +118,44 @@ public class KhairatmemberHandler extends HttpServlet {
         rd.createKhairatstaff(sta);
         response.sendRedirect("staff.index.jsp");
     }
+
+	private void updateKhairatmember(HttpServletRequest request, HttpServletResponse response)
+        throws SQLException, IOException {
+		
+		HttpSession session = request.getSession();
+		String membername = request.getParameter("membername");
+		String memberid = request.getParameter("memberid");
+		String membercontactno = request.getParameter("membercontactno");
+		String memberaddress = request.getParameter("memberaddress");
+		String memberemail = request.getParameter("memberemail");
+		String memberpassword = request.getParameter("memberpassword");
+		Khairatmember mem = new Khairatmember();
+		
+		mem.setmemberID(memberid);
+		mem.setmemberName(membername);
+		mem.setmemberContactNo(membercontactno);
+		mem.setmemberAddress(memberaddress);
+		mem.setmemberEmail(memberemail);
+		mem.setmemberPassword(memberpassword);
+		ud.updateKhairatmember(mem);
+		
+		session.removeAttribute("membername");
+		session.removeAttribute("memberid");
+		session.removeAttribute("membercontactno");
+		session.removeAttribute("memberaddress");
+		session.removeAttribute("memberemail");
+		session.removeAttribute("memberpassword");
+		
+		session.setAttribute("membername", membername);
+		session.setAttribute("memberid", memberid);
+		session.setAttribute("membercontactno", membercontactno);
+		session.setAttribute("memberaddress" , memberaddress);
+		session.setAttribute("memberpassword", memberpassword);
+		
+		response.sendRedirect("AKAUN_PENGGUNA.jsp");
+		
+		
+	}
 }
 	/*private void deleteKhairatmember(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException{

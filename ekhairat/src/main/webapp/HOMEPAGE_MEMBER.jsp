@@ -1,8 +1,6 @@
-<%
-	String name = request.getParameter( "nomborkp" ); 
-	session.setAttribute( "theName", name ); 
-%>
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -13,6 +11,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setHeader("Expires", "0");
+	if(session.getAttribute("name")==null)
+		response.sendRedirect("index.jsp");
+%>
 	<header>
 		<div class="topheader"></div>
 		<img class="banner" src="Screenshot_243.jpg">	
@@ -41,7 +46,7 @@
 
 	    <br><br><br>
 	    <div class="scroll">
-	    	
+	    
 	    </div>
 
 	</header>
