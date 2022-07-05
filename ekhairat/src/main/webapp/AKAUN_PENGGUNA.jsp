@@ -69,7 +69,6 @@ margin-left:14px;
             <label>${id}</label>
         </div>
     </div>
-
     <div class="row">
         <div class="col-25">
             <label>NOMBOR TELEFON</label>
