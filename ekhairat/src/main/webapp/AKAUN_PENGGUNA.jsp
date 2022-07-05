@@ -43,7 +43,7 @@ margin-left:14px;
 	    <div class="scroll1">
 	    <br>
 	    <b>NAME: </b>
-	    <c:forEach items="${Khairatmember}" var="i" varStatus="Khairatmember">
+	    <c:forEach var="user"  items="$(listUser)">
 	     <c:out value="${i.membername}"/>
 	    </c:forEach>
 	    </div>

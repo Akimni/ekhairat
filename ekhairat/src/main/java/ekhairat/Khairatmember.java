@@ -8,9 +8,36 @@ public class Khairatmember {
     String memberPassword;
     String memberAddress;
 
-    public Khairatmember() {}
+  
+    
+	public Khairatmember(String memberName, String memberID, String memberContactNo, String memberEmail,
+			String memberPassword, String memberAddress) {
+		super();
+		this.memberName = memberName;
+		this.memberID = memberID;
+		this.memberContactNo = memberContactNo;
+		this.memberEmail = memberEmail;
+		this.memberPassword = memberPassword;
+		this.memberAddress = memberAddress;
+	}
+	
+	
+	public Khairatmember(String memberName, String memberContactNo, String memberEmail, String memberPassword,
+			String memberAddress) {
+		super();
+		this.memberName = memberName;
+		this.memberContactNo = memberContactNo;
+		this.memberEmail = memberEmail;
+		this.memberPassword = memberPassword;
+		this.memberAddress = memberAddress;
+	}
 
-    public String getmemberName() {
+
+	public Khairatmember() {
+		
+	}
+
+	public String getmemberName() {
         return memberName;
     }
     public void setmemberName(String memberName) {

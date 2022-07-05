@@ -5,8 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class registrationDao {
@@ -35,7 +34,7 @@ public class registrationDao {
         return con;
 
     }
-	
+	//untuk create member account
 	public void createKhairatmember (Khairatmember mem) throws SQLException {
 
         // try-with-resource statement will auto close the connection.
@@ -55,7 +54,8 @@ public class registrationDao {
         }
     }
 
-	
+
+	//untuk create staff account
 	public void createKhairatstaff (Khairatstaff sta) throws SQLException {
 
         // try-with-resource statement will auto close the connection.
@@ -74,7 +74,81 @@ public class registrationDao {
             e.printStackTrace();
         }
     }
+}
+	//untuk update user
+	/*public boolean updateKhairatmember(Khairatmember mem) throws SQLException{
+		
+		boolean rowUpdated;
+		try (Connection connection= getConnection();
+				PreparedStatement statement =connection.prepareStatement("");){
+					statement.setString(1, mem.getmemberName());
+					statement.setString(2, mem.getmemberID());
+		            statement.setString(3, mem.getmemberContactNo());
+		            statement.setString(5, mem.getmemberEmail());
+		            statement.setString(6, mem.getmemberPassword());
+		            statement.setString(4, mem.getmemberAddress());
+		            
+		            rowUpdated=statement.executeUpdate()>0;
+				}
+				return rowUpdated;
+	}
 
+	//select user by memberid
+	public Khairatmember selectKhairatmember (int id) {
+		Khairatmember user=null; 
+		try(Connection connection= getConnection();
+		PreparedStatement preparedStatement = connection.prepareStatement(" select memberid from khairatmember");){	
+			preparedStatement.setInt(1,id);
+		System.out.println(preparedStatement);
+		ResultSet rs = preparedStatement.executeQuery();
+		 while (rs.next()) {
+			 String memberName=rs.getString("membername");
+			 String memberID=rs.getString("memberid");
+			 String memberContactNo= rs.getString("membercontactno");
+			 String memberAddress=rs.getString("memberaddress");
+			 String memberEmail=rs.getString("memberemail");
+			 String memberPassword=rs.getString("memberpassword");
+			 user= new Khairatmember(id,memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress);	 
+		 }
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return user;
+		}
+	//select users
+	public List<Khairatmember> selectAllKhairatmember(){
+		List<Khairatmember> users =new ArrayList<>();
+		try(Connection connection= getConnection(); 
+		PreparedStatement preparedStatement= connection.prepareStatement("");){
+			System.out.println(preparedStatement);
+			ResultSet rs=preparedStatement.executeQuery();
+			while (rs.next()) {
+				int id=rs.getInt("id");
+				String memberName=rs.getString("membername");
+				 String memberID=rs.getString("memberid");
+				 String memberContactNo= rs.getString("membercontactno");
+				 String memberAddress=rs.getString("memberaddress");
+				 String memberEmail=rs.getString("memberemail");
+				 String memberPassword=rs.getString("memberpassword");
+				 users.add( new Khairatmember(id,memberName,memberID,memberContactNo,memberEmail,memberPassword,memberAddress));	 
+		}
+		}
+			catch (SQLException e) {
+			e.printStackTrace();	
+			}
+			return users;
+		}*/
+		
+
+	
+
+	
+
+	
+	
+	
 
 	/*private void printSQLException(SQLException e) {
 		// TODO Auto-generated method stub
@@ -106,7 +180,17 @@ public class registrationDao {
         }
         return rowDeleted;
     }*/
-public static List<Khairatmember> getAllInfo(){
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*public static List<Khairatmember> getAllInfo(){
 	List<Khairatmember> infos = new ArrayList<Khairatmember>();
 	
 	try 
@@ -158,5 +242,5 @@ public static Khairatmember getKhairatmemberBymemberID(int memberID) {
     }
 	
 	return i;
-}
-}
+}*/
+
