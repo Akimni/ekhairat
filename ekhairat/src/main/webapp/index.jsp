@@ -22,9 +22,9 @@
 		<p class="typemem">LOG MASUK SEBAGAI KHAIRAT</p>
 		<div class="login">
 			<label class="logintext" for="username">Nombor K/P</label>
-			<input class="userbox" type="text" name="nomborkp" id="username" placeholder="Nombor Kad Pengenalan" required><br>
+			<input class="userbox" type="text" name="nomborkp" id="nomborkp" placeholder="Nombor Kad Pengenalan" required><br>
 			<label class="logintext margin" for="password">Kata Laluan</label>
-			<input class="passbox margin" type="password" name="pass" id="password" placeholder="Kata Laluan" required>
+			<input class="passbox margin" type="password" name="pass" id="pass" placeholder="Kata Laluan" required>
 		</div>
 		<input type="submit" name="submitlogin" value="LOG MASUK" class="btnlogin" /><br>
 	</form>

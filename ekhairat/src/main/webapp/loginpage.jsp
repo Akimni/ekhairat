@@ -12,7 +12,7 @@
 	<div>
 		<img class="logo" src="Surau Al-Hidayah1.png">
 	</div>
-	<form method="post" action="login">
+	<form method="post" action="loginmember">
 		<label class="check align" for="khairat">Khairat</label>
 		<input class = "checkbox" type="radio" id="khairat" name="khairatorstaff">
 		<label class="check nextalign" for="staff">Staff</label>
@@ -36,7 +36,8 @@
 	<script type="text/javascript">
 	var status = document.getElementById("status").value;
 	if(status == "failed") {
-		swal("Sorry", "Wrong username or password", "error");
+		//swal("Sorry", "Wrong username or password", "error");
+		alert("Wrong email or password");
 	}
 	</script>
 </body>
