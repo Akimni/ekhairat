@@ -124,6 +124,7 @@ public class KhairatmemberHandler extends HttpServlet {
         throws SQLException, IOException {
 		
 		HttpSession session = request.getSession();
+		session.getAttribute("name");
 		String membername = request.getParameter("membername");
 		String memberid = request.getParameter("memberid");
 		String membercontactno = request.getParameter("membercontactno");
