@@ -32,6 +32,7 @@ public class KhairatmemberHandler extends HttpServlet {
      */
     public KhairatmemberHandler() {
     	super();
+    	rd =new registrationDao();
         // TODO Auto-generated constructor stub
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
