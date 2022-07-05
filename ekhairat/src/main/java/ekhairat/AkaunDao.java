@@ -18,7 +18,7 @@ public class AkaunDao<Khairatmemberr> {
 	private static final String dbURL = "jdbc:postgresql://ec2-52-73-184-24.compute-1.amazonaws.com/dckqi5pj1ki93c";
 	private static final String user = "olkzesmgaifpnp";
 	private static final String pass = "e13b8bdf28023c60fd1bfde4b54a707571b971a82e85d244b7871afc806f26ed";
-	
+	private static final String SELECT_MEMBERKHAIRAT_BY_ID="select memberid,membername,membercontactno,mambereamil,memberadress from khairatmeber where id?";
 	public static Connection getConnection() {
         Connection con = null;
         try {
@@ -35,7 +35,7 @@ public class AkaunDao<Khairatmemberr> {
 	}
      
     	//untuk update user
-    	public boolean updateKhairatmemberr(Khairatmember mem) throws SQLException{
+    	/*public boolean updateKhairatmemberr(Khairatmember mem) throws SQLException{
     		
     		boolean rowUpdated;
     		try (Connection connection= getConnection();
@@ -50,13 +50,13 @@ public class AkaunDao<Khairatmemberr> {
     		            rowUpdated=statement.executeUpdate()>0;
     				}
     				return rowUpdated;
-    	}
+    	}*/
 
     	//select user by memberid
     	public Khairatmember selectKhairatmember (String memberID) {
     		Khairatmember user=null; 
     		try(Connection connection= getConnection();
-    		PreparedStatement preparedStatement = connection.prepareStatement(" select memberid from khairatmember");){	
+    		PreparedStatement preparedStatement = connection.prepareStatement("SELECT_MEMBERKHAIRAT_BY_MEMBERID");){	
     			preparedStatement.setString(1,memberID);
     		System.out.println(preparedStatement);
     		ResultSet rs = preparedStatement.executeQuery();
@@ -76,7 +76,7 @@ public class AkaunDao<Khairatmemberr> {
     		return user;
     		}
     	//select users
-    	public List<Khairatmember> selectAllKhairatmember(){
+    	/*public List<Khairatmember> selectAllKhairatmember(){
     		List<Khairatmember> users =new ArrayList<>();
     		try(Connection connection= getConnection(); 
     		PreparedStatement preparedStatement= connection.prepareStatement("");){
@@ -97,5 +97,5 @@ public class AkaunDao<Khairatmemberr> {
     			}
     			return users;
     		
-    }
+    }*/
 }

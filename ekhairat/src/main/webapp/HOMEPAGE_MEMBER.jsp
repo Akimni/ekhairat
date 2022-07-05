@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 	<header>
 		<div class="topheader"></div>
 		<img class="banner" src="Screenshot_243.jpg">	

@@ -43,11 +43,6 @@ margin-left:14px;
 	    <div class="scroll1">
 	    <br>
 	    <b>NAME: </b>
-	    <c:forEach var="users"  items="$(listUser)">
-	     <c:out value="${users.membername}"/>
-	    </c:forEach>
-	    </div>
-
 	</header>
 </body>
 </html>

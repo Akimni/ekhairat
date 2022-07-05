@@ -1,7 +1,6 @@
 package ekhairat;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,12 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/AkaunHAndler")
 public class AkaunHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private AkaunDao<?> AkaunDAO;
+	private AkaunDao AkaunDAO;
 	/**
      * @see HttpServlet#HttpServlet()
      */
     public AkaunHandler() {
-       this.AkaunDAO=new AkaunDao<Object>();
+       this.AkaunDAO=new AkaunDao();
        
     }
 
@@ -35,30 +34,19 @@ public class AkaunHandler extends HttpServlet {
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action=request.getServletPath();
 		switch (action) {
-		case "/new":
-			showNewForm(request,response);
-			break;
-		case "/insert":
-			break;
-		case "/delete":
-			break;
-		case "/edit":
-			break;
-		case "update":
-			break;
+		case "/view":
+			Khairatmember(request, response);
 		default:
-			listUser(request, response);
 			break;
 		}		
 		}
 
-		private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		/*private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher= request.getRequestDispatcher("AKAUN_PENGGUNA.jsp");
 		dispatcher.forward(request,response);
-		}
-		private void listUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			List<Khairatmember>listUser=AkaunDAO.selectAllKhairatmember();
-			request.setAttribute("listUser", listUser);
+		}*/
+		
+		private void Khairatmember(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			RequestDispatcher dispatcher =request.getRequestDispatcher("AKAUN_PENGGUNA.jsp");
 			dispatcher.forward(request, response);
 			
