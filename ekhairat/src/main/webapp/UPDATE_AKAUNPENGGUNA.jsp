@@ -57,7 +57,7 @@ margin-left:14px;
             <label>NAMA</label>
         </div>
         <div class="col-75">
-            <label>${name}</label>
+            <input type="text" name="name" value="${name}">
         </div>
     </div>
     <div class="row">
@@ -65,7 +65,7 @@ margin-left:14px;
             <label>NOMBOR KAD PENGENALAN</label>
         </div>
         <div class="col-75">
-            <label>${id}</label>
+            <input type="text" name="id" value="${id}">
         </div>
     </div>
     <div class="row">
@@ -73,7 +73,7 @@ margin-left:14px;
             <label>NOMBOR TELEFON</label>
         </div>
         <div class="col-75">
-            <label>${contact}</label>
+            <input type="tel" name="contact" value="${contact}">
         </div>
     </div>
     <div class="row">
@@ -81,7 +81,7 @@ margin-left:14px;
             <label>ALAMAT</label>
         </div>
         <div class="col-75">
-            <label>${address}</label>
+            <input type="text" name="address" value="${address}">
         </div>
         </div>
     <div class="row">
@@ -89,7 +89,7 @@ margin-left:14px;
             <label>EMAIL</label>
         </div>
         <div class="col-75">
-            <label>${email}</label>
+            <input type="email" name="email" value="${email}">
         </div>
         </div>
     <div class="row">
@@ -97,16 +97,14 @@ margin-left:14px;
             <label>PASSWORD</label>
         </div>
         <div class="col-75">
-            <label>${password}</label>
+            <input type="password" name="password" value="${password}">
         </div>
         </div>
 
 
 
-    <input type="hidden" name="action" value="delete">
-
-
-    <button type="submit"  class="button button1" name="submit" onclick="form.action='UPDATE_AKAUNPENGGUNA.jsp'">UPDATE</button>
+    	<input type="hidden" name="action" value="updateKhairatmember">
+        <button type="submit" class="button button1" name="submit" >Submit</button><br><br>
 
 
 </div>

@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 
 
-public class registrationDao {
+public class khairatDao {
 	
 	static Connection con = null;
 	static PreparedStatement ps = null;
@@ -74,25 +74,26 @@ public class registrationDao {
             e.printStackTrace();
         }
     }
-}
+
 	//untuk update user
-	/*public boolean updateKhairatmember(Khairatmember mem) throws SQLException{
+	public boolean updateKhairatmember(Khairatmember mem) throws SQLException{
 		
 		boolean rowUpdated;
 		try (Connection connection= getConnection();
-				PreparedStatement statement =connection.prepareStatement("");){
+				PreparedStatement statement =connection.prepareStatement("UPDATE khairatmember set membername=?,membercontactno=?,memberaddress=?,memberemail=?,memberpassword=? where memberid=?");){
 					statement.setString(1, mem.getmemberName());
-					statement.setString(2, mem.getmemberID());
-		            statement.setString(3, mem.getmemberContactNo());
-		            statement.setString(5, mem.getmemberEmail());
-		            statement.setString(6, mem.getmemberPassword());
-		            statement.setString(4, mem.getmemberAddress());
+		            statement.setString(2, mem.getmemberContactNo());
+		            statement.setString(3, mem.getmemberAddress());
+		            statement.setString(4, mem.getmemberEmail());
+		            statement.setString(5, mem.getmemberPassword());
+		            statement.setString(6, mem.getmemberID());
 		            
 		            rowUpdated=statement.executeUpdate()>0;
 				}
 				return rowUpdated;
 	}
-
+}
+/*
 	//select user by memberid
 	public Khairatmember selectKhairatmember (int id) {
 		Khairatmember user=null; 

@@ -18,28 +18,24 @@ import javax.servlet.http.HttpSession;
 public class KhairatmemberHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private registrationDao rd;
+	private khairatDao rd;
 	public void init(){
-		rd = new registrationDao();
+		rd = new khairatDao();
 	}
 	
-	private updateDao ud;
-	public void onit() {
-		ud = new updateDao();
-	}
     /**
      * Default constructor. 
      */
     public KhairatmemberHandler() {
     	super();
-    	rd =new registrationDao();
+    	rd =new khairatDao();
         // TODO Auto-generated constructor stub
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	HttpSession session = request.getSession();
+    	/*HttpSession session = request.getSession();
     	session.removeAttribute("membername");
     	session.invalidate();
-    	response.sendRedirect("index.jsp");
+    	response.sendRedirect("index.jsp");*/
     	
     }
 	/**
@@ -124,34 +120,35 @@ public class KhairatmemberHandler extends HttpServlet {
         throws SQLException, IOException {
 		
 		HttpSession session = request.getSession();
-		String membername = request.getParameter("membername");
-		String memberid = request.getParameter("memberid");
-		String membercontactno = request.getParameter("membercontactno");
-		String memberaddress = request.getParameter("memberaddress");
-		String memberemail = request.getParameter("memberemail");
-		String memberpassword = request.getParameter("memberpassword");
+		String memberNAME = request.getParameter("name");
+		String memberID = request.getParameter("id");
+		String memberCONTACTNO = request.getParameter("contact");
+		String memberADDRESS = request.getParameter("address");
+		String memberEMAIL = request.getParameter("email");
+		String memberPASSWORD = request.getParameter("password");
 		Khairatmember mem = new Khairatmember();
 		
-		mem.setmemberID(memberid);
-		mem.setmemberName(membername);
-		mem.setmemberContactNo(membercontactno);
-		mem.setmemberAddress(memberaddress);
-		mem.setmemberEmail(memberemail);
-		mem.setmemberPassword(memberpassword);
-		ud.updateKhairatmember(mem);
+		mem.setmemberName(memberNAME);
+		mem.setmemberID(memberID);
+		mem.setmemberContactNo(memberCONTACTNO);
+		mem.setmemberAddress(memberADDRESS);
+		mem.setmemberEmail(memberEMAIL);
+		mem.setmemberPassword(memberPASSWORD);
+		rd.updateKhairatmember(mem);
 		
-		session.removeAttribute("membername");
-		session.removeAttribute("memberid");
-		session.removeAttribute("membercontactno");
-		session.removeAttribute("memberaddress");
-		session.removeAttribute("memberemail");
-		session.removeAttribute("memberpassword");
+		session.removeAttribute("name");
+		session.removeAttribute("id");
+		session.removeAttribute("contact");
+		session.removeAttribute("address");
+		session.removeAttribute("email");
+		session.removeAttribute("password");
 		
-		session.setAttribute("membername", membername);
-		session.setAttribute("memberid", memberid);
-		session.setAttribute("membercontactno", membercontactno);
-		session.setAttribute("memberaddress" , memberaddress);
-		session.setAttribute("memberpassword", memberpassword);
+		session.setAttribute("name", memberNAME);
+		session.setAttribute("id", memberID);
+		session.setAttribute("contact", memberCONTACTNO);
+		session.setAttribute("address" , memberADDRESS);
+		session.setAttribute("email" , memberEMAIL);
+		session.setAttribute("password", memberPASSWORD);
 		
 		response.sendRedirect("AKAUN_PENGGUNA.jsp");
 		
