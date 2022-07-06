@@ -15,8 +15,43 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <style>
-b{
-margin-left:14px;
+
+table, th, td {
+  border: 1px solid  #f4a460;
+  border-radius:2px;
+}
+table {
+  width: 90%;
+  margin-left:30px;
+  margin-top:40px;
+  font-size:18;
+  background: white;
+  border-colour:;
+}
+input{
+ width: 70%;
+margin-left:150px;
+align-item:left;
+border:0px solid ;
+}
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
+.button1{
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin: 4px 85%;
+  padding: 11px;
+  background-color: #4CAF50;
+  margin-top:10px;
+  font-family: serif, Helvetica; 
+  background-color: #81bb7d;
+	border: none;
 }
 </style>
 <body>
@@ -51,8 +86,42 @@ margin-left:14px;
 <div class="container" style="height: auto">
 
     <input type=hidden name="memberid"  value="${id}" >
+        <table>
+    
+    	<tr>
+    	<th>NAMA:</th>
+    	<td><input type="text" name="name" value="${name}"></td>
+    	</tr>
+    	
+    	<tr>
+    	<th>NOMBOR KAD PENGENALAN:</th>
+    	<td><input type="text" name="id" value="${id}"></td>
+    	</tr>
+    	
+    	<tr>
+    	<th>NOMBOR TELEFON:</th>
+    	<td><input type="tel" name="contact" value="${contact}"></td>
+    	</tr>
+    	
+    	<tr>
+    	<th>ALAMAT:</th>
+    	<td><input type="text" name="address" value="${address}"></td>
+    	</tr>
+    	
+    	<tr>
+    	<th>EMAIL:</th>
+    	<td><input type="email" name="email" value="${email}"></td>
+    	</tr>
+    	
+    	<tr>
+    	<th>PASSWORD:</th>
+    	<td><input type="password" name="password" value="${password}"></td>
+    	
+    	</tr>
+    	
+    </table>
 
-    <div class="row">
+<%--    <div class="row">
         <div class="col-25">
             <label>NAMA</label>
         </div>
@@ -99,8 +168,7 @@ margin-left:14px;
         <div class="col-75">
             <input type="password" name="password" value="${password}">
         </div>
-        </div>
-
+        </div> --%>
 
 
     	<input type="hidden" name="action" value="updateKhairatmember">
