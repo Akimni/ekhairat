@@ -3,7 +3,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<% if(session.getAttribute("name")==null)
+<% if(session.getAttribute("id")==null)
 	response.sendRedirect("index.jsp");
 %>
 
@@ -49,9 +49,8 @@ margin-left:14px;
 	    	<form action="KhairatmemberHandler" method="post">
 
 <div class="container" style="height: auto">
-    <h3>MY PROFILE</h3>
 
-    <input type="number" name="memberid"  value="${name}" >
+    <input type=hidden name="memberid"  value="${id}" >
 
     <div class="row">
         <div class="col-25">
@@ -89,9 +88,9 @@ margin-left:14px;
         <div class="col-25">
             <label>EMAIL</label>
         </div>
-        </div>
         <div class="col-75">
             <label>${email}</label>
+        </div>
         </div>
     <div class="row">
         <div class="col-25">

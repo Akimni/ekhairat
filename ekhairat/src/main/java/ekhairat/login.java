@@ -52,9 +52,9 @@ public class login extends HttpServlet {
 			if(result.next()) {
 				//will redirect to homepage
 				session.setAttribute("name", result.getString("membername"));
-				//session.setAttribute("id", result.getString("memberid"));
-				//session.setAttribute("contact", result.getString("membercontactno"));
-				session.setAttribute("address", result.getString("memberadress"));
+				session.setAttribute("id", result.getString("memberid"));
+				session.setAttribute("contact", result.getString("membercontactno"));
+				session.setAttribute("address", result.getString("memberaddress"));
 				session.setAttribute("email", result.getString("memberemail"));
 				session.setAttribute("password", result.getString("memberpassword"));
 				
