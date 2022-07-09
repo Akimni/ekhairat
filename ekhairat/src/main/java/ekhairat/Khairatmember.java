@@ -1,8 +1,6 @@
 package ekhairat;
 
-import java.io.Serializable;
-
-public class Khairatmember implements Serializable{
+public class Khairatmember {
 	String memberName;
     String memberID;
     String memberContactNo;
