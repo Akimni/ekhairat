@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<% if(session.getAttribute("id")==null)
+	response.sendRedirect("index.jsp");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,16 +31,19 @@
 				<b><a id="linkin" onclick="window.location.href='loginpage.jsp';">LOG KELUAR</a></b>
 			</li>
 			</ul>
-
+			<form action="uploadkhairatpayment" method="post" enctype="multipart/form-data">
 			<h1 id = "muatnaik">MUAT NAIK BUTIRAN TRANSAKSI</h1>
 
  			 <div class="button center">
-                <b><a class="but_muat" onclick="window.location.href='UPLOAD_PEMBAYARAN.jsp';">MUAT NAIK</a></b>
+ 			 	<td>Upload File</td>
+                <input type="file" name="file" required>
+                <input type="submit" value="Submit">
              </div>
   			 <div class="button right">
   			 	<b><a class="but_kem" onclick="window.location.href='SEJARAH_PEMBAYARAN.jsp';">KEMBALI</a></b>
    				
   			</div>
+  			</form>
 			
 	</header>
 </body>
